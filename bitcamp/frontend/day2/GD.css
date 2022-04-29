@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+
+#fontchange {
+  font-family: 'Arvo', serif;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.centered {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.color_coral {
+  color: coral;
+}
+table {
+  margin-left:auto; 
+  margin-right:auto;
+}
+#table_cell{
+  border-spacing: 10px;
+}
+td {
+  text-align: center;
+}
+
