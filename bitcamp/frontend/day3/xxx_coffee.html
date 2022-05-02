@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <script src="xxx_coffee.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <nav>
+    <ul class="nav">
+      <li><img src="star.png" width="50px" height="50px"></li>
+      <li><a href="">Buy Online</a></li>
+      <li><a href="">Member's Club</a></li>
+      <li><a href="">Menu</a></li>
+      <li><a href="">Store</a></li>
+      <li><a href="">The coffee</a></li>
+      <li><a href="">CBTL</a></li>
+      <li id='right'>
+        <div>
+          <input type="text" placeholder="검색어 입력">
+          <button><img src="icon.png" width="10px" height="10px"></button>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="SignUp.html" target="ifr">Sign Up</a>
+    <a href="SignIn.html" target="ifr">Sign In</a>
+  </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <div style="position:relative; width:100%; height:100%">
+    <iframe src="background.PNG" name="ifr" id="iframe" onload="Height();" frameborder="0" scrolling="no"
+      style="overflow-x:hidden; overflow:auto; width:100%; min-height:500px;"></iframe>
+
+  </div>
+
+</body>
+
+</html>
