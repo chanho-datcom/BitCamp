@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    var d = true;
+
+    function handleonclick() {
+
+      d = !d;
+      if (d) {
+        document.getElementById('demo').innerHTML = Date();
+      } else {
+        document.getElementById('demo').innerHTML = "flase";
+      }
+    }
+
+
+
+
+    function handleonclick2() {
+      const x = 0;
+      const y = 0;
+      const result = x + y;
+      document.getElementById('demo2').innerHTML = result;
+    }
+  </script>
+</head>
+
+<body>
+
+  <h2>My First JavaScript</h2>
+
+  <button id="btn1" type="button" onclick=handleonclick()>
+    <!-- onclick -> event -->
+    button1</button>
+  <button type="button" onclick=handleonclick2()>
+    button2</button>
+
+  <p id="demo"></p>
+  <hr>
+  <p id="demo2"></p>
+
+
+</body>
+
+</html>

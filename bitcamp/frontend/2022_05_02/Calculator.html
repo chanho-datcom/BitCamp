@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script type="text/Javascript" src="Calculator.js"></script>
+  <link rel="stylesheet" href="Calstyle.css">
+
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td colspan="4">
+        <input type="text" id="inum">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <input type="text" id="result">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">AC</td>
+      <td onclick="addnum('/')">/</td>
+    </tr>
+    <tr>
+      <td onclick="addnum(7)">7</td>
+      <td onclick="addnum(8)">8</td>
+      <td onclick="addnum(9)">9</td>
+      <td onclick="addnum('*')">*</td>
+    </tr>
+    <tr>
+      <td onclick="addnum(4)">4</td>
+      <td onclick="addnum(5)">5</td>
+      <td onclick="addnum(6)">6</td>
+      <td onclick="addnum('+')">+</td>
+    </tr>
+    <tr>
+      <td onclick="addnum(1)">1</td>
+      <td onclick="addnum(2)">2</td>
+      <td onclick="addnum(3)">3</td>
+      <td onclick="addnum('-')">-</td>
+    </tr>
+    <tr>
+      <td colspan="2" onclick="addnum(0)">0</td>
+      <td onclick="addnum('.')">.</td>
+      <td onclick=calculate()>=</td>
+    </tr>
+  </table>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <style>
+    .dispN {
+      display: none;
+    }
+  </style>
+  <script>
+    function showSome() {
+      document.getElementsByClassName("dispN")[0].style.display = "block";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="btn-area">
+    <button id="btn_show" onclick="showSome()">hello</button>
+  </div>
+  <div class="dispN" id="main_area">
+    <div id="area_UserName">
+      <p>Hello</p>
+    </div>
+    <div id="area_PassWord">
+      <p>My Name Is Hyoukha Hwon</p>
+    </div>
+  </div>
+</body>
+
+</html>

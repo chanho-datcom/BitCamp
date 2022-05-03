@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script>
+    function handleonclick() {
+
+      document.getElementById("img").innerHTML = ' <img  src="mv.jpg" alt="모비우스" width="150">';
+      document.getElementById("p1").innerHTML = '주연배우<br />자레드 레토, 아드리아 아르호나 등<br />'
+      document.getElementById("p2").innerHTML = '개봉일자<br />2022.03.30'
+
+    }
+    var d = false;
+
+    function handleonclick2() {
+      const btn2 = document.getElementById('btn2');
+      const img2 = document.querySelector(".img2");
+      d = !d;
+      if (d) {
+        img2.style.display = "none";
+      } else {
+        img2.style.display = "block";
+      }
+
+    }
+  </script>
+  <!--html 문서 문자 인코딩 방식 -->
+  <style>
+    .centered {
+      text-align: center;
+      align-items: center;
+      align-content: center;
+    }
+
+
+    .color_blue {
+      color: blue;
+    }
+  </style>
+  <title>Movies</title>
+</head>
+
+<body>
+  <div class="centered">
+    <!--div는 레이아웃-->
+    <hr size="2">
+    <center>
+      <h1>모비우스</h1>
+      <hr>
+    </center>
+    <button type="button" onclick=handleonclick()>
+      <!-- onclick -> event -->
+      button1</button>
+    <a id="img" href="https://movie.naver.com/movie/bi/mi/basic.naver?code=190695">
+
+    </a>
+    <hr>
+    <h5>
+      <p id="p1" style="font-size: 1rem;" class="color_blue"></p>
+      <p id="p2" style="font-size: 1rem;"></p>
+    </h5>
+  </div>
+  <button id="btn2" type="button" onclick=handleonclick2()>
+    <!-- onclick -> event -->
+    button2</button>
+
+  <img src="mv.jpg" class="img2" style="display: block" alt="모비우스" width="150">
+
+
+</body>
+
+</html>/
