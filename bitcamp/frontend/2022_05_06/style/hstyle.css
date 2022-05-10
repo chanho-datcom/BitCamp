@@ -1,0 +1,61 @@
+body {
+	background: #424242; 
+}
+h1{
+  color: darkgrey;
+}
+#cgv{
+  margin-right: auto;
+  width: 100px; height: 40px; display: table-cell; vertical-align: middle;font-size: 14px;
+}
+#menubar1 {
+	width: 100%; height: 40px;
+}
+#menubar1-menus {
+	width: 600px; margin-right: auto; list-style: none; padding: 0; text-align: center; font-size: 0; display: table;
+}
+#menubar {
+	width: 100%; height: 40px; background: #666;
+}
+
+#menubar-menus {
+	width: 600px; margin: 0 auto; list-style: none; padding: 0; text-align: center; font-size: 0; display: table;
+}
+#menubar-menus > li {
+	width: 200px; height: 40px; display: table-cell; vertical-align: middle; text-align: center; font-size: 14px;
+}
+#menubar-menus > li > a {
+	 display: table-cell; vertical-align: middle; width: 200px; height: 40px; text-decoration: none; color: #FFF;
+	/* 서브 메뉴 영역이 가로 방향으로 100% 보이는 것을 원치 않을 때 아래 라인을 활성 */
+	/*position: relative;*/
+}
+/* #menubar-menus li를 position: relative 처리를 하는 경우에 아래 hover 상태 처리를 주석 처리 할 것. */
+/*#menubar-menus li:hover {
+	background: #FFF;
+}*/
+#menubar-menus > li > div {
+	position: absolute; background: #FFF; color: #000; left: 0; width: 100%; top: auto; display: none;
+	padding: 50px 0; z-index: 10;
+}
+#table{
+  width: 100%;
+}
+table, td{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.num{
+  color: #FFF;
+  background-color:#666;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+img{
+  width: 80%;
+}
+.title{
+  color: #FFF;
+
+}
