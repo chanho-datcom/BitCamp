@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="ko">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/Ustyle.css">
+  <script src="./scripts/jquery-3.6.0.min.js"></script>
+  <script src="./scripts/Jquery_test.js"></script>
+  <script src="./scripts/js_filter.js"></script>
+</head>
+
+<body>
+
+  <div id="div1">
+    <p id="p1">회원가입</p>
+    <p id="p2">로그인</p>
+  </div>
+  <div id="div2" class="d">
+    <div>
+      <!--<form action="../../backend/2022_05_09/post_result.php" , method="POST" onsubmit="return check();">-->
+      <form action="#" , method="POST">
+        <label>이름</label>
+        <input type="text" class="User_info" id="Uname" name="Uname" placeholder="이름"><br />
+        <label>주소</label>
+        <input type="text" class="User_info" id="Uaddress" name="Uaddress" placeholder="주소"><br />
+        <label>전화번호</label>
+        <input type="text" class="User_info" id="Unumber" name="Unumber" placeholder="전화번호"><br />
+        <label>아이디</label>
+        <input type="text" class="User_info" id="Uid" name="Uid" placeholder="아이디"><br />
+        <label>비밀번호</label>
+        <input type="password" class="User_info" id="Upwd" name="Upwd" placeholder="비밀번호"><br />
+        <label>국적</label>
+        <select name="Nationality">
+          <option value="" selected="selected">국적선택</option>
+          <option value="korea">한국</option>
+          <option value="US">미국</option>
+          <option value="AUS">호주</option>
+          <option value="UK">영국</option>
+          <option value="Ch">중국</option>
+        </select>
+        <input type="button" id="btn1" onclick="check()" value="회원가입">
+      </form>
+    </div>
+  </div>
+  <div id="div3" class="d">
+    <table>
+      <tr>
+        <td>ID</td>
+        <td><input type="text" class="UserInfo"></td>
+      </tr>
+      <tr>
+        <td>PassWord</td>
+        <td><input type="text" class="UserInfo"></td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>
