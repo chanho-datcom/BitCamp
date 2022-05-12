@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search</title>
+
+</head>
+
+<body>
+  <div>
+    <form action="nopage" method="POST" name="search_form" onsubmit="return search_by_name()">
+
+      검색할이름<input type="text" id="id_search_box" name="name_search_box">
+
+      <input type="button" onclick="search_by_name()" value="검색">
+      <input type="button" onclick="show()" value="콘솔">
+    </form>
+    <p id="p1"></p>
+    <p id="p2"></p>
+  </div>
+  <script>
+    'use strict'
+    let members_info = {
+      pk11: {
+        name: '손길동',
+        age: 29,
+        address: '활빈당',
+        tel: '010-4567-7894'
+      },
+      pk22: {
+        name: '손흥민',
+        age: 34,
+        address: '런던',
+        tel: '010-4877-7894'
+      },
+      pk33: {
+        name: '배수도',
+        age: 33,
+        address: '서울',
+        tel: '010-4657-7894'
+      },
+      pk44: {
+        name: '박찬호',
+        age: 26,
+        address: '성남',
+        tel: '010-6338-3204'
+      }
+    };
+
+    let keys = Object.keys(members_info);
+    let values = Object.values(members_info);
+    let Conf = "";
+
+
+
+    function search_by_name() {
+      let a = [];
+      let search_item = document.getElementById('id_search_box').value;
+      if (search_item.trim() != "") {
+        //console.log(search_item);
+        for (let k in members_info) {
+          //console.log(k);
+          let mk = members_info[k];
+          //console.log(mk);
+          let mv = Object.keys(mk);
+          //console.log(mk)
+          for (let i in mk) {
+            // console.log(i);\
+            let regex = new RegExp(search_item);
+            if (regex.test(mk[i])) {
+              //console.log(mk[i]);
+              Conf = " <- 이거 찾음?"
+              a.push(mk[i]);
+            }
+            if (mk[i] == search_item) {
+              Conf = "<- 삭제완료";
+              document.getElementById('p1').innerHTML = mk[i] + Conf;
+              delete mk[i];
+              return false;
+            } else {
+
+
+            }
+
+          }
+        }
+
+        if (a.length == 0) {
+          Conf = " <- 그런거 없음";
+          document.getElementById('p1').innerHTML = search_item + Conf;
+        } else {
+          document.getElementById('p1').innerHTML = a;
+        }
+
+      }
+    }
+
+    function show() {
+      for (let i = 0; i < keys.length; i++) {
+        console.log(values[i].name);
+        console.log(values[i].age);
+        console.log(values[i].address);
+        console.log(values[i].tel);
+      }
+      console.log("==========================")
+    }
+  </script>
+</body>
+
+</html>
