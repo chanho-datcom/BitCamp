@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bitcamp.reactboard.mapper.ProductMapper">
+    <select id="selectAll" resultType="product2">
+        select product.id, productname, sellerid, registerDate, updatedDate, likes, counts, nickname from product inner join `user` on product.sellerid = user.id
+    </select>
+    <select id="selectAllBySellerId" resultType="product" parameterType="int">
+        select * from product where sellerid = #{sellerid}
+    </select>
+    <insert id="insert" parameterType="product">
+        insert into product (productname, sellerid, registerDate, updatedDate)
+        values (#{productname}, #{sellerid},now(), now())
+    </insert>
+    <select id="selectOne" resultType="product" parameterType="int">
+        select * from product where id= #{id}
+    </select>
+</mapper>
